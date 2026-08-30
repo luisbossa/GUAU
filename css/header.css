@@ -1,0 +1,468 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.site-logo {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.site-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.site-logo-link:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.site-logo-image {
+  display: block;
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+}
+
+.header-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 0.65rem;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    opacity 0.25s ease;
+}
+
+.menu-trigger:hover {
+  opacity: 0.65;
+}
+
+.header-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: inherit;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-span,
+.cart-icon {
+  pointer-events: none;
+}
+
+.menu-panel {
+  width: 360px;
+  max-width: calc(100vw - 2rem);
+  margin: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  color: #131315;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  border-radius: 12px;
+  transform: translateX(20px);
+
+  background-color: #fff;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   MENU PANEL
+========================================== */
+
+.menu-panel {
+  width: 360px;
+  max-width: calc(100vw - 2rem);
+  margin: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+  color: #131315;
+  background-color: #fff;
+  border-radius: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(20px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   CART PANEL
+========================================== */
+
+.cart-panel {
+  width: 400px;
+  max-width: calc(100vw - 1rem);
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(calc(100% + 1rem));
+
+  transition:
+    transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1),
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  -webkit-transform: translateX(calc(100% + 1rem));
+  -webkit-transition:
+    -webkit-transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1),
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+/* ==========================================
+   MENU ABIERTO
+========================================== */
+
+.menu-panel.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* ==========================================
+   CARRITO ABIERTO
+========================================== */
+
+.cart-panel.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+/* ==========================================
+   MENU HEADER
+========================================== */
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-title {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #131315;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.menu-close {
+  width: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menu-close:hover {
+  opacity: 0.7;
+}
+
+.menu-close-icon {
+  display: block;
+  pointer-events: none;
+}
+
+/* ==========================================
+   MENU NAVIGATION
+========================================== */
+
+.menu-navigation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  margin-bottom: 0.5rem;
+
+  color: #131315;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.menu-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background-color: currentColor;
+
+  transition: width 0.25s ease;
+}
+
+.menu-link:hover {
+  opacity: 0.7;
+  transform: translateX(3px);
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.menu-info {
+  padding-bottom: 0.25rem;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9998;
+
+  background: rgba(19, 19, 21, 0.45);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.panel-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ==========================================
+   HEADER COLORS
+========================================== */
+
+.site-header.header-light .header-span {
+  color: #000 !important;
+}
+
+.site-header.header-dark .header-span {
+  color: #fff !important;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-panel {
+    margin: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-panel {
+    margin: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-panel {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: calc(100vw - 1rem);
+    max-width: none;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0.65rem;
+  }
+
+  .menu-title {
+    font-size: 0.8rem;
+  }
+
+  .menu-navigation {
+    padding-top: 0.85rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .menu-link {
+    font-size: 0.82rem;
+  }
+
+  .menu-close-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .menu-panel {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: calc(100vw - 0.8rem);
+    padding: 0.85rem;
+  }
+
+  .menu-navigation {
+    margin-bottom: 2rem;
+  }
+
+  .menu-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .menu-trigger {
+    min-height: 44px;
+    padding: 0 0.75rem;
+  }
+
+  .header-span {
+    font-size: 0.68rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-container {
+    padding: 1rem 2rem;
+  }
+
+  .header-actions {
+    gap: 0.75rem;
+  }
+
+  .menu-trigger {
+    padding: 0 0.85rem;
+  }
+
+  .header-span {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .site-logo-image {
+    width: 120px;
+    height: auto;
+  }
+
+  .header-actions {
+    gap: 0.15rem;
+  }
+
+  .menu-trigger {
+    min-height: 38px;
+    padding: 0 0.4rem;
+  }
+
+  .header-span {
+    min-width: 36px;
+    height: 36px;
+
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+}

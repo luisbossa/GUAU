@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GUAU SHOP</title>
+
+    <meta name="description"
+        content="GUAU es una tienda de accesorios para perros inspirada en la estética Y2K. Collares, correas y productos con estilo, personalidad y mucha actitud.">
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script src="//lunge.world/cdn/shop/t/2/assets/SwupBodyClassPlugin.min.js?v=13" type="text/javascript"></script>
+</head>
+
+<body class="template-index">
+    <div id="mini-cart" class="panel cart-panel">
+        <div class="cart-panel__content">
+            <div class="cart-panel__inner">
+
+                <!-- Cart header -->
+                <div class="cart-panel__header">
+                    <p class="cart-panel__title">
+                        Carrito (<span id="cart-count">0</span>)
+                    </p>
+
+                    <button type="button" class="close-panel menu-close" aria-label="Cerrar carrito">
+                        <svg class="menu-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="41" height="41" rx="10" fill="black" />
+                            <rect x="25.9004" y="16.25" width="14" height="1.2" transform="rotate(135 25.9004 16.25)"
+                                fill="#F6F5F0" />
+                            <rect x="24.9004" y="26.25" width="14" height="1.2" transform="rotate(-135 24.9004 26.25)"
+                                fill="#F6F5F0" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Empty cart -->
+                <div class="cart-panel__empty empty-state">
+                    <p class="cart-panel__empty-message">
+                        Tu carrito está vacío
+                    </p>
+
+                    <div class="cart-panel__footer">
+                        <a href="/collections/all" class="cart-panel__shop-button">
+                            Explorar productos
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-content" class="panel menu-panel">
+        <div class="menu-header">
+            <p class="menu-title">Menú</p>
+
+            <div class="close-panel menu-close" role="button" tabindex="0" aria-label="Cerrar menú">
+                <svg class="menu-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="41" height="41" rx="10" fill="black" />
+                    <rect x="25.9004" y="16.25" width="14" height="1.2" transform="rotate(135 25.9004 16.25)"
+                        fill="#F6F5F0" />
+                    <rect x="24.9004" y="26.25" width="14" height="1.2" transform="rotate(-135 24.9004 26.25)"
+                        fill="#F6F5F0" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="menu-navigation">
+            <a class="menu-link" href="/collections/all">Todo</a>
+            <a class="menu-link" href="/collections/accessories">Accesorios</a>
+            <a class="menu-link" href="/collections/bundle-save">Paquete y Ahorro</a>
+            <a class="menu-link" href="/collections/collar">Collares</a>
+            <a class="menu-link" href="/collections/harness">Arneses</a>
+            <a class="menu-link" href="/collections/leash">Correas</a>
+        </div>
+
+        <div class="menu-info">
+            <a class="menu-link" href="/pages/about">Información</a>
+        </div>
+    </div>
+
+
+    <div class="page-container">
+        <header class="site-header">
+            <div class="header-container">
+
+                <a href="/" class="site-logo-link" aria-label="Ir al inicio">
+                    <h1 class="site-logo">
+                        <img class="site-logo-image" width="115" height="27" src="/images/logo.png" alt="Logo">
+                    </h1>
+                </a>
+
+                <nav class="header-actions" aria-label="Acciones principales">
+
+                    <div class="menu-wrapper menu-wrapper-navigation">
+                        <div class="menu-trigger" data-trigger="mini-cart" role="button" tabindex="0">
+                            <span class="header-span">
+                                CARRITO
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="menu-wrapper menu-wrapper-navigation">
+                        <div class="menu-trigger" data-trigger="menu-content" role="button" tabindex="0">
+                            <span class="header-span">
+                                MENÚ
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" id="swup" class="page-transition">
+            <section id="shopify-section-slider" class="shopify-section hero-section">
+
+                <div class="home-slider hero-slider">
+                    <div class="swiper-wrapper" id="hero-slides"><!-- DINAMIC CONTENT --></div>
+
+                    <div class="mobile-slider-scrollbar">
+                        <div class="slider-scrollbar"></div>
+                    </div>
+                </div>
+
+                <div class="slider-thumbs thumbnail-slider">
+                    <div class="swiper-wrapper thumbnail-wrapper" id="slider-thumbnails"><!-- DINAMIC CONTENT --></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="c-footer">
+                        <div class="layout">
+                            <div class="layout_item w-50">
+                                <div class="newsletter">
+                                    <img class="footer-logo" src="/images/footer-logo.png" alt="Footer logo">
+                                </div>
+                            </div>
+
+                            <div class="layout_item w-25">
+                                <nav class="c-nav-tool">
+                                    <h4 class="c-nav-tool_title">Menú</h4>
+                                    <ul class="c-nav-tool_list">
+                                        <li>
+                                            <a href="/collections/all" class="c-link">Todo</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/collections/all" class="c-link">Accesorios</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/pages/about-us" class="c-link">Collares</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/blogs/community" class="c-link">Correas</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/pages/about-us" class="c-link">Acerca de</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/blogs/community" class="c-link">Comunidad</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="layout_item w-25">
+                                <nav class="c-nav-tool">
+                                    <h4 class="c-nav-tool_title">Soporte</h4>
+                                    <ul class="c-nav-tool_list">
+
+                                        <li class="c-nav-tool_item">
+                                            <a href="/pages/shipping-returns" class="c-link">Envíos &amp;
+                                                devoluciones</a>
+                                        </li>
+
+                                        <li class="c-nav-tool_item">
+                                            <a href="/pages/terms-conditions" class="c-link">Terminos &amp;
+                                                condiciones</a>
+                                        </li>
+
+                                        <li class="c-nav-tool_item">
+                                            <a href="/pages/privacy-policy" class="c-link">Política de privacidad</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="layout_item w-25">
+                                <nav class="c-nav-tool">
+                                    <h4 class="c-nav-tool_title">Información</h4>
+                                    <ul class="c-nav-tool_list">
+                                        <li class="c-nav-tool_item">
+                                            <a href="/pages/help" class="c-link">Preguntas frecuentes</a>
+                                        </li>
+
+                                        <li class="c-nav-tool_item">
+                                            <a href="/pages/contact" class="c-link">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="layout c-2">
+                            <div class="layout_item w-50">
+                                <ul class="socials-div">
+                                    <li>
+                                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            width="32" height="32">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 6.654a6.786 6.786 0 0 1 2.596 5.344A6.786 6.786 0 0 1 12 17.34a6.786 6.786 0 0 1-2.596-5.343A6.786 6.786 0 0 1 12 6.654zm-.87-.582A7.783 7.783 0 0 0 8.4 12a7.783 7.783 0 0 0 2.728 5.926 6.798 6.798 0 1 1 .003-11.854zm1.742 11.854A7.783 7.783 0 0 0 15.6 12a7.783 7.783 0 0 0-2.73-5.928 6.798 6.798 0 1 1 .003 11.854z" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            width="32" height="32">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M1 4h22v2H1V4zm0 14h22v2H1v-2zm18.622-3.086l-.174-.87h-1.949l-.31.863-1.562.003c1.005-2.406 1.75-4.19 2.236-5.348.127-.303.353-.457.685-.455.254.002.669.002 1.245 0L21 14.912l-1.378.003zm-1.684-2.062h1.256l-.47-2.18-.786 2.18zM7.872 9.106l1.57.002-2.427 5.806-1.59-.001c-.537-2.07-.932-3.606-1.184-4.605-.077-.307-.23-.521-.526-.622-.263-.09-.701-.23-1.315-.419v-.16h2.509c.434 0 .687.21.769.64l.62 3.289 1.574-3.93zm3.727.002l-1.24 5.805-1.495-.002 1.24-5.805 1.495.002zM14.631 9c.446 0 1.01.138 1.334.267l-.262 1.204c-.293-.118-.775-.277-1.18-.27-.59.009-.954.256-.954.493 0 .384.632.578 1.284.999.743.48.84.91.831 1.378-.01.971-.831 1.929-2.564 1.929-.791-.012-1.076-.078-1.72-.306l.272-1.256c.656.274.935.361 1.495.361.515 0 .956-.207.96-.568.002-.257-.155-.384-.732-.702-.577-.317-1.385-.756-1.375-1.64C12.033 9.759 13.107 9 14.63 9z" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            width="32" height="32">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 0 0-.794.68l-.04.22-.63 3.993-.032.17a.804.804 0 0 1-.794.679H7.72a.483.483 0 0 1-.477-.558L7.418 21h1.518l.95-6.02h1.385c4.678 0 7.75-2.203 8.796-6.502zm-2.96-5.09c.762.868.983 1.81.752 3.285-.019.123-.04.24-.062.36-.735 3.773-3.089 5.446-6.956 5.446H8.957c-.63 0-1.174.414-1.354 1.002l-.014-.002-.93 5.894H3.121a.051.051 0 0 1-.05-.06l2.598-16.51A.95.95 0 0 1 6.607 2h5.976c2.183 0 3.716.469 4.523 1.388z" />
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="layout_item w-25">
+                                <div class="footer_copyright">
+                                    <p>&copy; 2026 GUAU</p>
+                                </div>
+
+                            </div>
+                            <div class="layout_item w-25"
+                                style="display:flex;justify-content: end;align-items: center;">
+                                <ul class="socials-div">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="32" height="32">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path
+                                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="32" height="32">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path
+                                                    d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="panel-overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/slider-data.js"></script>
+    <script src="/js/slider-render.js"></script>
+    <script src="/js/slider.js"></script>
+</body>
+
+</html>
