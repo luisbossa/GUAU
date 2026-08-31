@@ -2,7 +2,15 @@ const sliderContainer = document.getElementById("hero-slides");
 const thumbnailsContainer = document.getElementById("slider-thumbnails");
 
 function isDarkColor(hex) {
-  hex = hex.replace("#", "");
+  hex = hex.replace("#", "").trim();
+
+  // Convierte #fff → #ffffff
+  if (hex.length === 3) {
+    hex = hex
+      .split("")
+      .map((char) => char + char)
+      .join("");
+  }
 
   const r = parseInt(hex.substring(0, 2), 16);
   const g = parseInt(hex.substring(2, 4), 16);
@@ -33,84 +41,70 @@ function renderSlides() {
             data-swiper-parallax-x="100%"
           >
 
-            <picture class="hero-media">
-              <img
-                data-swiper-parallax-x="-50%"
-                class="hero-image"
-                src="${item.image}"
-                alt="${item.title}"
-              />
+            <picture 
+                class="hero-media"
+                style="background-color: ${item.background}"
+            >
+                <img 
+                    data-swiper-parallax-x="-50%"
+                    class="hero-image"
+                    src="${item.image}"
+                    alt="${item.title}"
+                />
             </picture>
 
             <div class="swiper-nav swiper-prev"></div>
             <div class="swiper-nav swiper-next"></div>
 
             <div 
-  class="slider-info hero-info" 
-  data-swiper-parallax-opacity="0"
->
-    <div class="hero-info-main">
+          class="slider-info hero-info" 
+          data-swiper-parallax-opacity="0"
+        >
+        <div class="hero-info-main">
+            <div class="hero-info-heading">
+                <span class="hero-eyebrow">
+                    GUAU SHOP
+                </span>
 
-        <!-- CABECERA -->
-        <div class="hero-info-heading">
-
-            <span class="hero-eyebrow">
-                GUAU SHOP
-            </span>
-
-            <h2 class="hero-title">
-                ${item.title}
-            </h2>
-
-        </div>
-
-
-        <!-- INFORMACIÓN INFERIOR -->
-        <div class="hero-info-footer">
-
-            <!-- DESCRIPCIÓN -->
-            <div class="hero-description-wrapper">
-
-                <p class="hero-description">
-                    ${item.description}
-                </p>
-
+                <h2 class="hero-title">
+                    ${item.title}
+                </h2>
             </div>
 
+            <div class="hero-info-footer">
 
-            <!-- PRECIO + ACCIÓN -->
-            <div class="hero-purchase">
-
-                <div class="hero-price">
-
-                    <span class="hero-price-label">
-                        Desde
-                    </span>
-
-                    <span class="hero-price-value">
-                        ${item.price}
-                    </span>
+                <!-- DESCRIPCIÓN -->
+                <div class="hero-description-wrapper">
+                    <p class="hero-description">
+                        ${item.description}
+                    </p>
 
                 </div>
 
+                <div class="hero-purchase">
 
-                <div class="hero-info-action">
+                    <div class="hero-price">
+                        <span class="hero-price-label">
+                            Precio
+                        </span>
 
-                    <a 
-                        class="shop-btn" 
-                        href="${item.link}"
-                    >
-                        ${item.button}
-                    </a>
+                        <span class="hero-price-value">
+                            ${item.price}
+                        </span>
+                    </div>
 
+                    <div class="hero-info-action">
+                        <a 
+                            class="shop-btn" 
+                            href="${item.link}"
+                        >
+                            ${item.button}
+                        </a>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-</div>
 
           </div>
         </div>
