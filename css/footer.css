@@ -75,7 +75,7 @@
 .c-nav-tool_title {
   margin: 0 0 1rem;
   color: var(--footer-accent);
-  font-size: 0.68rem;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.14em;
@@ -101,7 +101,7 @@
   align-items: center;
   padding: 0.18rem 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.78rem;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   text-decoration: none;
@@ -110,24 +110,9 @@
     transform 0.25s ease;
 }
 
-.c-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--light);
-  transition: width 0.3s ease;
-}
-
 .c-link:hover {
   color: #fff;
-  transform: translateX(3px);
-}
-
-.c-link:hover::after {
-  width: 100%;
+  transform: translateX(2px);
 }
 
 .c-2 {
@@ -262,7 +247,7 @@
   }
 
   .c-nav-tool_title {
-    margin-bottom: 0.85rem;
+    margin-bottom: 13px;
     font-size: 0.62rem;
   }
 

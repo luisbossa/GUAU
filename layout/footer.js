@@ -73,13 +73,13 @@ const footer = `
                 <div class="layout_item w-50">
                     <ul class="socials-div">
                         <li>
-                            <img src="/images/svg/mastercard.svg" alt="Master Card">
+                            <img class="footer-icon" src="/images/svg/mastercard.svg" alt="Master Card">
                         </li>
                         <li>
-                            <img src="/images/svg/visa.svg" alt="Visa">
+                            <img class="footer-icon" src="/images/svg/visa.svg" alt="Visa">
                         </li>
                         <li>
-                            <img src="/images/svg/paypal.svg" alt="Paypal">
+                            <img class="footer-icon" src="/images/svg/paypal.svg" alt="Paypal">
                         </li>
                     </ul>
                 </div>
