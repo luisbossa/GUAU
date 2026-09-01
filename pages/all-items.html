@@ -16,33 +16,34 @@
 
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/all-items/default.css">
-    <link rel="stylesheet" href="/css/all-items/component.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <body>
-    <header id="header-div" class="site-header">
-        <!-- DINAMIC CONTENT -->
-    </header>
+    <div id="mini-cart" class="panel cart-panel"></div>
 
-    <div class="container">
-        <main>
-            <section id="cbp-pgcontainer" class="cbp-pgcontainer" aria-label="Todos los productos">
-                <ul id="productGrid" class="cbp-pggrid"></ul>
-            </section>
-        </main>
-    </div>
+    <div id="menu-content" class="panel menu-panel"></div>
 
-    <footer id="footer-div" class="footer">
-        <!-- DINAMIC CONTENT -->
-    </footer>
+    <header id="header-div" class="site-header"></header>
 
+    <main class="products-page">
+        <section id="product-container" class="products-container" aria-label="Todos los productos">
+            <ul id="product-grid" class="product-grid"></ul>
+        </section>
+    </main>
+
+    <footer id="footer-div" class="footer"></footer>
+
+    <script src="/js/header.js"></script>
     <script src="/js/modernizr.js"></script>
     <script src="/js/products.js"></script>
     <script src="/js/product-grid.js"></script>
 
     <script src="/layout/header.js"></script>
+    <script src="/layout/menu.js"></script>
+    <script src="/layout/cart.js"></script>
     <script src="/layout/footer.js"></script>
 </body>
 

@@ -1,124 +1,99 @@
-const productGrid = document.getElementById("productGrid");
+const productGridElement = document.getElementById("product-grid");
 
 function formatPrice(price) {
   return `₡${price.toLocaleString("es-CR")}`;
 }
 
 function createProduct(product) {
-  const li = document.createElement("li");
+  const productElement = document.createElement("li");
 
-  li.dataset.productId = product.id;
+  productElement.className = "product-card";
+  productElement.dataset.productId = product.id;
 
-  li.innerHTML = `
-    <div class="cbp-pgcontent">
-
-        <div class="cbp-pgitem">
-
-            <div class="cbp-pgitem-flip">
-
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
-
-            </div>
-
-        </div>
-
-
-        <ul class="cbp-pgoptions">
-
-            <!-- TALLA -->
-            <li class="cbp-pgoptsize">
-
-                <span data-size="${product.defaultSize}">
-                    ${product.defaultSize}
-                </span>
-
-                <div class="cbp-pgopttooltip">
-
-                    ${product.sizes
-                      .map(
-                        (size) => `
-                                <span data-size="${size}">
-                                    ${size}
-                                </span>
-                            `,
-                      )
-                      .join("")}
-
+  productElement.innerHTML = `
+        <div class="product-content">
+            <div class="product-image">
+                <div class="product-image-flip">
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
                 </div>
-
-            </li>
-
-
-            <!-- COLOR -->
-            <li class="cbp-pgoptcolor">
-
-                <span data-color="${product.defaultColor}">
-                    ${getColorName(product.colors, product.defaultColor)}
-                </span>
-
-                <div class="cbp-pgopttooltip">
-
-                    ${product.colors
-                      .map(
-                        (color) => `
-                                <span data-color="${color.id}">
-                                    ${color.name}
-                                </span>
-                            `,
-                      )
-                      .join("")}
-
-                </div>
-
-            </li>
-
-
-            <!-- CARRITO -->
-            <li class="cbp-pgoptcart"></li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- INFORMACIÓN DEL PRODUCTO -->
-    <div class="cbp-pginfo">
-        <div class="cbp-pginfo-main">
-            <div class="cbp-pginfo-details">
-                <span class="cbp-pgcategory">
-                    GUAU COLLECTION
-                </span>
-                <h3>
-                    ${product.name}
-                </h3>
             </div>
-
-            <span class="cbp-pgprice">
-                ${formatPrice(product.price)}
-            </span>
+            <ul class="product-options">
+                <li class="product-option product-option-size">
+                    <span data-size="${product.defaultSize}">
+                        ${product.defaultSize}
+                    </span>
+                    <div class="product-option-tooltip product-size-tooltip">
+                        ${product.sizes
+                          .map(
+                            (size) => `
+                                    <span data-size="${size}">
+                                        ${size}
+                                    </span>
+                                `,
+                          )
+                          .join("")}
+                    </div>
+                </li>
+                <li class="product-option product-option-color">
+                    <span data-color="${product.defaultColor}">
+                        ${getColorName(product.colors, product.defaultColor)}
+                    </span>
+                    <div class="product-option-tooltip product-color-tooltip">
+                        ${product.colors
+                          .map(
+                            (color) => `
+                                    <span
+                                        data-color="${color.id}"
+                                        title="${color.name}"
+                                    >
+                                        ${color.name}
+                                    </span>
+                                `,
+                          )
+                          .join("")}
+                    </div>
+                </li>
+                <li class="product-option product-option-cart"></li>
+            </ul>
         </div>
-    </div>
-`;
+        <div class="product-info">
+            <div class="product-info-main">
+                <div class="product-info-details">
+                    <span class="product-category">
+                        GUAU COLLECTION
+                    </span>
+                    <h3 class="product-name">
+                        ${product.name}
+                    </h3>
+                </div>
+                <span class="product-price">
+                    ${formatPrice(product.price)}
+                </span>
+            </div>
+        </div>
+    `;
 
-  return li;
+  return productElement;
 }
 
 function getColorName(colors, colorId) {
   const color = colors.find((color) => color.id === colorId);
-
   return color ? color.name : "";
 }
 
 function renderProducts() {
-  productGrid.innerHTML = "";
+  if (!productGridElement || !Array.isArray(products)) {
+    return;
+  }
+
+  productGridElement.innerHTML = "";
 
   products.forEach((product) => {
     const productElement = createProduct(product);
-
-    productGrid.appendChild(productElement);
+    productGridElement.appendChild(productElement);
   });
 }
 

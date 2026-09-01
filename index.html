@@ -29,76 +29,10 @@
     <script src="//lunge.world/cdn/shop/t/2/assets/SwupBodyClassPlugin.min.js?v=13" type="text/javascript"></script>
 </head>
 
-<body class="template-index">
-    <div id="mini-cart" class="panel cart-panel">
-        <div class="cart-panel__content">
-            <div class="cart-panel__inner">
+<body>
+    <div id="mini-cart" class="panel cart-panel"></div>
 
-                <!-- Cart header -->
-                <div class="cart-panel__header">
-                    <p class="cart-panel__title">
-                        Carrito (<span id="cart-count">0</span>)
-                    </p>
-
-                    <button type="button" class="close-panel menu-close" aria-label="Cerrar carrito">
-                        <svg class="menu-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="41" height="41" rx="10" fill="black" />
-                            <rect x="25.9004" y="16.25" width="14" height="1.2" transform="rotate(135 25.9004 16.25)"
-                                fill="#F6F5F0" />
-                            <rect x="24.9004" y="26.25" width="14" height="1.2" transform="rotate(-135 24.9004 26.25)"
-                                fill="#F6F5F0" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Empty cart -->
-                <div class="cart-panel__empty empty-state">
-                    <p class="cart-panel__empty-message">
-                        Tu carrito está vacío
-                    </p>
-
-                    <div class="cart-panel__footer">
-                        <a href="/pages/all" class="cart-panel__shop-button">
-                            Explorar productos
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="menu-content" class="panel menu-panel">
-        <div class="menu-header">
-            <p class="menu-title">Menú</p>
-
-            <div class="close-panel menu-close" role="button" tabindex="0" aria-label="Cerrar menú">
-                <svg class="menu-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="41" height="41" rx="10" fill="black" />
-                    <rect x="25.9004" y="16.25" width="14" height="1.2" transform="rotate(135 25.9004 16.25)"
-                        fill="#F6F5F0" />
-                    <rect x="24.9004" y="26.25" width="14" height="1.2" transform="rotate(-135 24.9004 26.25)"
-                        fill="#F6F5F0" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="menu-navigation">
-            <a class="menu-link" href="/pages/all-items.html">Todo</a>
-            <a class="menu-link" href="/pages/accessories">Accesorios</a>
-            <a class="menu-link" href="/pages/bundle-save">Paquete y Ahorro</a>
-            <a class="menu-link" href="/pages/collar">Collares</a>
-            <a class="menu-link" href="/pages/harness">Arneses</a>
-            <a class="menu-link" href="/pages/leash">Correas</a>
-        </div>
-
-        <div class="menu-info">
-            <a class="menu-link" href="/pages/about">Información</a>
-        </div>
-    </div>
-
+    <div id="menu-content" class="panel menu-panel"></div>
 
     <div class="page-container">
         <header id="header-div" class="site-header">
@@ -135,8 +69,10 @@
     <script src="/js/slider-data.js"></script>
     <script src="/js/slider-render.js"></script>
     <script src="/js/slider.js"></script>
-    
+
     <script src="/layout/header.js"></script>
+    <script src="/layout/menu.js"></script>
+    <script src="/layout/cart.js"></script>
     <script src="/layout/footer.js"></script>
 </body>
 

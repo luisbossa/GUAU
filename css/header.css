@@ -63,8 +63,7 @@
   padding: 0 0.65rem;
   cursor: pointer;
   user-select: none;
-  transition:
-    opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
 .menu-trigger:hover {
@@ -97,49 +96,18 @@
   margin: 0.5rem;
   padding: 1rem;
   box-sizing: border-box;
-
-  color: #131315;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  border-radius: 12px;
-  transform: translateX(20px);
-
-  background-color: #fff;
-
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* ==========================================
-   MENU PANEL
-========================================== */
-
-.menu-panel {
-  width: 360px;
-  max-width: calc(100vw - 2rem);
-  margin: 0.5rem;
-  padding: 1rem;
-  box-sizing: border-box;
-
   position: fixed;
   top: 0;
   right: 0;
   z-index: 9999;
-
   color: #131315;
-  background-color: #fff;
   border-radius: 12px;
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+  background-color: #f8f8f6;
   transform: translateX(20px);
-
+  border: 1px solid rgba(19, 19, 21, 0.2);
   transition:
     opacity 0.3s ease,
     visibility 0.3s ease,
