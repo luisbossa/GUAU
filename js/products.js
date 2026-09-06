@@ -8,21 +8,21 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "Blue",
-        value: "#72bbe9",
+        name: "Negro",
+        value: "#000",
         image: "/images/all-items/item1.avif",
       },
       {
         id: "c2",
-        name: "Pink",
+        name: "Rosa",
         value: "#e577aa",
-        image: "/images/all-items/item1.avif",
+        image: "/images/all-items/item1.1.avif",
       },
       {
         id: "c3",
-        name: "Orange",
-        value: "#e99a55",
-        image: "/images/all-items/item1.avif",
+        name: "Rojo",
+        value: "#D85143",
+        image: "/images/all-items/item1.2.avif",
       },
     ],
     defaultSize: "M",
@@ -38,13 +38,13 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "Gray",
+        name: "Plata",
         value: "#BEBEBE",
         image: "/images/all-items/item2.avif",
       },
       {
         id: "c2",
-        name: "Gold",
+        name: "Oro",
         value: "#E7D296",
         image: "/images/all-items/item2.1.jfif",
       },
@@ -62,13 +62,13 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "Gold",
+        name: "Oro",
         value: "#F1DBA7",
         image: "/images/all-items/item3.jfif",
       },
       {
         id: "c2",
-        name: "Gray",
+        name: "Gris",
         value: "#BEBEBE",
         image: "/images/all-items/item3.1.jfif",
       },
@@ -85,19 +85,19 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "Pink",
+        name: "Rosa",
         value: "#e577aa",
         image: "/images/all-items/item4.jfif",
       },
       {
         id: "c2",
-        name: "Blue",
+        name: "Celeste",
         value: "#9BD1F5",
         image: "/images/all-items/item4.1.jfif",
       },
       {
         id: "c3",
-        name: "Red",
+        name: "Rojo",
         value: "#FA6B65",
         image: "/images/all-items/item4.2.jfif",
       },
@@ -115,7 +115,7 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "Gold",
+        name: "Oro",
         value: "#F1DBA7",
         image: "/images/all-items/item5.jfif",
       },
@@ -125,28 +125,28 @@ const products = [
 
   {
     id: 6,
-    name: "Huella de Luces",
+    name: "Huellas",
     price: 12000,
     image: "/images/all-items/item6.avif",
     sizes: ["L", "M", "S"],
     colors: [
       {
         id: "c1",
-        name: "Pink",
+        name: "Fucsia",
         value: "#CA588E",
         image: "/images/all-items/item6.avif",
       },
       {
         id: "c2",
-        name: "Blue",
-        value: "#72aedf",
-        image: "/images/all-items/item6.avif",
+        name: "Blanco",
+        value: "#fff",
+        image: "/images/all-items/item6.1.avif",
       },
       {
         id: "c3",
-        name: "Orange",
-        value: "#e99a55",
-        image: "/images/all-items/item6.avif",
+        name: "Negro",
+        value: "#000",
+        image: "/images/all-items/item6.2.avif",
       },
     ],
     defaultSize: "L",
