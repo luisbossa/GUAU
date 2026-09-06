@@ -31,7 +31,7 @@ const products = [
         image: "/images/all-items/item1.avif",
       },
     ],
-    defaultSize: "XL",
+    defaultSize: "M",
     defaultColor: "c1",
   },
 
@@ -44,18 +44,18 @@ const products = [
     colors: [
       {
         id: "c1",
-        name: "gray",
+        name: "Gray",
         value: "#BEBEBE",
         image: "/images/all-items/item2.avif",
       },
       {
         id: "c2",
-        name: "gold",
+        name: "Gold",
         value: "#E7D296",
         image: "/images/all-items/item2.1.jfif",
       },
     ],
-    defaultSize: "XL",
+    defaultSize: "S",
     defaultColor: "c1",
   },
 
@@ -79,7 +79,6 @@ const products = [
         image: "/images/all-items/item3.1.jfif",
       },
     ],
-    defaultSize: "XL",
     defaultColor: "c1",
   },
 
@@ -109,7 +108,7 @@ const products = [
         image: "/images/all-items/item4.2.jfif",
       },
     ],
-    defaultSize: "XL",
+    defaultSize: "L",
     defaultColor: "c1",
   },
 
@@ -119,8 +118,14 @@ const products = [
     price: 15300,
     image: "/images/all-items/item5.jfif",
     sizes: [],
-    colors: [],
-    defaultSize: "XL",
+    colors: [
+      {
+        id: "c1",
+        name: "Gold",
+        value: "#F1DBA7",
+        image: "/images/all-items/item5.jfif",
+      },
+    ],
     defaultColor: "c1",
   },
 
@@ -150,7 +155,7 @@ const products = [
         image: "/images/all-items/item6.avif",
       },
     ],
-    defaultSize: "XL",
+    defaultSize: "L",
     defaultColor: "c1",
   },
 ];
