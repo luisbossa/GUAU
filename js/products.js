@@ -117,16 +117,9 @@ const products = [
     id: 5,
     name: "Noche Dorada",
     price: 15300,
-    image: "/images/all-items/item5.avif",
+    image: "/images/all-items/item5.jfif",
     sizes: [],
-    colors: [
-      {
-        id: "c1",
-        name: "Gold",
-        value: "#F1DBA7",
-        image: "/images/all-items/item5.avif",
-      },
-    ],
+    colors: [],
     defaultSize: "XL",
     defaultColor: "c1",
   },
