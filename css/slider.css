@@ -329,7 +329,7 @@
   }
 }
 
-.slider-thumbs .swiper-slide:not(:last-child) {
+.slider-thumbs .swiper-slide {
   margin-right: 8px;
 }
 
