@@ -4,7 +4,7 @@ const products = [
     name: "Hueso Nocturno",
     price: 13800,
     image: "/images/all-items/item1.avif",
-    sizes: ["XL", "L", "M", "S"],
+    sizes: ["L", "M", "S"],
     colors: [
       {
         id: "c1",
@@ -22,12 +22,6 @@ const products = [
         id: "c3",
         name: "Orange",
         value: "#e99a55",
-        image: "/images/all-items/item1.avif",
-      },
-      {
-        id: "c4",
-        name: "Green",
-        value: "#7ebf8e",
         image: "/images/all-items/item1.avif",
       },
     ],
