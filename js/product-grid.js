@@ -110,13 +110,15 @@ function createProduct(product) {
     <div class="product-content">
 
       <div class="product-image">
-        <div class="product-image-flip">
-          <img
-            class="product-image-main"
-            src="${defaultColor?.image || product.image}"
-            alt="${product.name}"
-          >
-        </div>
+       <a href="/pages/product-details.html" class="product-detail-link">
+          <div class="product-image-flip">
+            <img 
+              class="product-image-main" 
+              src="${defaultColor?.image || product.image}" 
+              alt="${product.name}" 
+            >
+          </div>
+        </a>
       </div>
 
       <ul class="product-options">

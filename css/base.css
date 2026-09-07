@@ -36,8 +36,6 @@ body {
   font-family: Clear, sans-serif;
 }
 
-/* CUSTOM SCROLLBAR */
-
 html {
   scrollbar-width: thin;
   scrollbar-color: #131315 transparent;
@@ -90,28 +88,52 @@ ul {
   list-style: none;
 }
 
-/* PAGE TRANSITIONS */
-
-body {
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #ffffff;
+  pointer-events: none;
   opacity: 1;
-  transition: opacity 0.4s ease;
+  animation: pageReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-body.page-enter {
+body.page-leaving::after {
   opacity: 0;
+  animation: pageCover 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-body.page-leaving {
-  opacity: 0;
+@keyframes pageReveal {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes pageCover {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body {
-    transition: none;
+  body::after {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
-  body.page-enter,
-  body.page-leaving {
-    opacity: 1;
+  body.page-leaving::after {
+    animation: none;
+    opacity: 0;
   }
 }
