@@ -9,7 +9,6 @@
   background-position: center;
   background-size: cover;
   color: var(--light);
-  font-family: "Inter", sans-serif;
 }
 
 .footer::before {
